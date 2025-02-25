@@ -1,10 +1,11 @@
 "use server"
 
+import prisma from "@/lib/prisma"
 import { auth, currentUser } from "@clerk/nextjs/server"
 import { PrismaClient } from "@prisma/client"
 import { revalidatePath } from "next/cache"
 
-const prisma = new PrismaClient()
+// const prisma = new PrismaClient()
 
 export async function syncUser() {
   try {

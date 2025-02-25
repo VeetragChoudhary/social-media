@@ -8,6 +8,7 @@ const prisma = new PrismaClient()
 
 export async function createPost(content: string, image: string) {
   try {
+    
     const userId = await getDbUserId()
 
     if (!userId) return
